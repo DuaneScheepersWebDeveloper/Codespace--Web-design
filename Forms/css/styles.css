@@ -1,0 +1,8 @@
+.formDiv {
+	margin: 50px;
+}
+.buttonDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

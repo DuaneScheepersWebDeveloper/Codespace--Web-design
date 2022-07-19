@@ -14,6 +14,7 @@ body {
 }
 
 .container {
+	margin-top:100px;	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -39,7 +40,6 @@ img {
 
 .container:hover img {
 	filter: none;
-
 	-webkit-transform: scale(1.2);
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
@@ -48,11 +48,16 @@ img {
 	-webkit-box-shadow: 0 0 50px #ccc;
 	box-shadow: 0 0 50px #ccc;
 }
+.container:hover .imageAnimationWrapper {
+	
+	animation: rotateImg 3s ease-out infinite;
+}
 
 .title {
+	margin-top:30px;
 	font-size: 3rem;
 	color: whitesmoke;
-	position: relative;
+	position: absolute;
 }
 
 .title::after {
@@ -133,12 +138,14 @@ img {
 	}
 }
 .selfie {
+	margin-top: -300px;
 	position: absolute;
-	animation: float 3s ease-out infinite;
+	
 }
 
 .imageAnimationWrapper {
-	animation: rotateImg 3s ease-out infinite;
+	margin-top: -320px;
+
 }
 .hexWrapper {
 	height: 100vh;
@@ -154,7 +161,8 @@ img {
 	border-right: 100px solid transparent;
 	border-left: 100px solid transparent;
 	position: relative;
-animation: colorChange1 4s ease-out infinite;
+	animation: colorChange1 4s ease-out infinite;
+	
 
 }
 .hex2 {
