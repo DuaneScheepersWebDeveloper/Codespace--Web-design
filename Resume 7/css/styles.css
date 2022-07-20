@@ -1,0 +1,123 @@
+.heading {
+	height: 750px;
+	margin: 0;
+	background-image: url(../images/coffee-shop.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+}
+.headShot {
+	border-radius: 100%;
+	height: 100%;
+	width: 150px;
+	border: solid 4px #ccc;
+}
+.headShot:hover {
+	-moz-box-shadow: 0 0 25px #ccc;
+	-webkit-box-shadow: 0 0 25px #ccc;
+	box-shadow: 0 0 25px #ccc;
+	transition: ease-out 1.5s;
+}
+
+.topIcons {
+	font-size: 3rem;
+}
+
+.mainHeadingText {
+	cursor: pointer;
+}
+.headerText {
+	cursor: pointer;
+	font-size: 4rem;
+	margin-bottom: 20px;
+}
+.headings {
+	font-family: 'Roboto', arial, helvetica, sans-serif;
+	font-size: 1.5rem;
+	width: 25%;
+	height: 100%;
+	background-color: #111;
+
+	padding: 30px;
+	color: white;
+	text-align: center;
+}
+.textEffect {
+	transition: 1.5s;
+}
+.textEffect:hover {
+	color: dodgerblue;
+	cursor: pointer;
+}
+
+.bottomHeaderHeadings {
+}
+.gifImage {
+	padding: 5px;
+	width: 150%;
+	height: 100%;
+}
+.gifImageGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	background-color: #ccc;
+}
+.imgDiv {
+	width: 8rem;
+	height: auto;
+}
+.block {
+	padding: 20px;
+}
+.block:hover {
+	cursor: pointer;
+	border-radius: 100%;
+	transition: 0.5s ease-in-out;
+}
+.block:hover img {
+	filter: none;
+}
+
+.skillsSection {
+	text-align: center;
+}
+.skillsDiv {
+	justify-content: center;
+	display: flex;
+}
+.skillsCard {
+	background-color: dodgerblue;
+	padding: 10px;
+	margin: 5rem;
+	border-radius: 10px;
+}
+@media (max-width: 500px) {
+	.heading {
+		height: auto;
+	}
+	.headings {
+		font-family: 'Roboto', arial, helvetica, sans-serif;
+		font-size: 1.5rem;
+		width: 100%;
+		background-image: url(../images/3.png);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		color: white;
+	}
+	.bottomHeaderHeadings {
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	.block {
+	}
+
+	.codespaceLogo {
+		width: auto;
+		height: auto;
+		display: none;
+	}
+}
