@@ -1,0 +1,154 @@
+/* ---------------------------------------------------------------- */
+/* Navbar */
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 40px;
+	right: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 1;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #eee;
+	transition: all 0.9s;
+}
+
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+	opacity: 0;
+}
+
+.change .line-3 {
+	transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar {
+	width: 20%;
+	height: 100%;
+	background: #111;
+	position: fixed;
+	top: 0;
+	right: -20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 80% 0 0 100%;
+	transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+	z-index: 1;
+}
+
+.change {
+	right: 0;
+}
+
+.nav-list {
+	text-align: right;
+}
+
+.nav-item {
+	text-align: center;
+	list-style: none;
+	margin: 25px;
+}
+
+.nav-link {
+	text-decoration: none;
+	font-size: 22px;
+	color: #eee;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	position: relative;
+	padding: 3px 0;
+}
+
+.nav-link:hover {
+	color: dodgerblue;
+}
+
+.nav-link::before,
+.nav-link::after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: dodgerblue;
+	position: absolute;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+
+.nav-link::after {
+	bottom: 0;
+	transform-origin: right;
+}
+
+.nav-link::before {
+	top: 0;
+	transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+	transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------- */
+@media (max-width: 500px) {
+	.navbar {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+	}
+
+	.change {
+		right: 0;
+	}
+
+	.hamburger-menu {
+		width: 35px;
+		height: 30px;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.navbar {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 120% 0 0 120%;
+		transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+	}
+
+	.change {
+		right: 0;
+	}
+}
